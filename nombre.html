@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            font-size: 23px;
+        }
+        input{
+            font-size: 23px;
+        }
+
+        button{
+            font-size: 23px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre de usuario: </label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <br>
+        <button type="button" id="btnEntrar">Entrar</button>
+        <br>
+        <output id="situacion"></output>
+    </form>
+    <script>
+        const btnEnviar = document.getElementById('btnEntrar');
+
+        btnEnviar.onclick = function(){
+            let usuario = document.getElementById('nombre').value;
+            let pass = document.getElementById('password').value;
+            if (usuario!=='mrubio' || pass!=='123456' ) {
+                document.getElementById('situacion').innerHTML='USUARIO INCORRECTO';
+            }else{
+                document.getElementById('situacion').innerHTML='USUARIO ACEPTADO';
+            }
+        }
+    </script>
+</body>
+</html>
