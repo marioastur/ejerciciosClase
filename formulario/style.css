@@ -1,0 +1,49 @@
+main {
+    width: 650px;
+    height: 500px;
+    margin: auto;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 20px);
+    row-gap: 30px;
+    column-gap: 35px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    color: black;
+    height: 15px;
+    margin-top: 5px;
+}
+
+input {
+    height: 25px;
+    width: 25vw;
+    border: 1px solid rgb(135, 216, 248);
+}
+
+.gridIz {
+    margin: 20px;
+}
+
+.gridDr {
+    margin: 20px;
+}
+
+.footerForm {
+    display: grid;
+    margin: auto;
+    height: 10px;
+    width: 650px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#btnSend {
+    margin-top: 10px;
+    font-size: 25px;
+    background-color: rgb(135, 216, 248);
+    border-radius: 12px;
+    width: 80px;
+}
