@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora con Javascript</title>
+    <style>
+        fieldset {
+            margin-top: 10px;
+            width: 350px;
+        }
+        
+        input {
+            margin: 10px;
+        }
+        
+        #number1,
+        #number2,
+        #result {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Ejercicio Javascript</h1>
+    <fieldset>
+        <legend>Calculadora</legend>
+        <form>
+
+            <label for="number1">Primer número</label>
+            <input type="number" name="number1" id="number1" size="10" placeholder="Primer número"><br/>
+            <label for="number2">Segundo número</label>
+            <input type="number" name="number2" id="number2" size="10" placeholder="Segundo número"><br/>
+
+            <fieldset>
+                <legend>Operaciones</legend>
+                <input type="radio" name="operacion" value="suma" id="suma" checked> <label for="suma">Suma</label><br>
+                <input type="radio" name="operacion" value="resta" id="resta"> <label for="resta">Resta</label><br>
+                <input type="radio" name="operacion" value="multi" id="multi"> <label for="multi">Multiplica</label><br>
+                <input type="radio" name="operacion" value="divide" id="divide"> <label for="divide">Divide</label>
+            </fieldset>
+
+            <br/>
+            <label for="result">Resultado</label>
+            <input type="result" name="result" id="result" size="10" placeholder="Resultado" disabled>
+            <button type="button" id="btn_resultado">Resultado</button>
+
+        </form>
+    </fieldset>
+    <script type="text/javascript">
+        const miBoton = document.getElementById('btn_resultado');
+
+        miBoton.onclick = function() {
+            let number1 = parseFloat(document.getElementById('number1').value);
+            let number2 = parseFloat(document.getElementById('number2').value);
+
+            let operator = document.querySelector('input[name="operacion"]:checked').value;
+
+            switch (operator) {
+                case 'suma':
+                    resultadoFinal = number1 + number2;
+                    break;
+
+                case 'resta':
+                    resultadoFinal = number1 - number2;
+                    break;
+
+                case 'multi':
+                    resultadoFinal = number1 * number2;
+                    break;
+
+                case 'divide':
+                    resultadoFinal = number1 / number2;
+                    break;
+            }
+
+            let mostrarResultado = document.getElementById('result');
+            mostrarResultado.value = resultadoFinal;
+        }
+    </script>
+</body>
+
+</html>
