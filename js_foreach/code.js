@@ -1,5 +1,6 @@
+/*
 
-/*function jewelSearch(myJewels, myStones){
+function jewelSearch(myJewels, myStones){
     let jewelArray = myJewels.split("")
     let stoneArray = myStones.split("")
     let jewelCount = 0
@@ -14,16 +15,22 @@
     return jewelCount
 }
 */
+
+
 let myJewels = "aN"
-let myStones = "anshnraN"
+
+let myStones = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestiae harum nostrum esse cumque enim eum tenetur, minima facilis quo, dignissimos blanditiis veniam. Assumenda similique accusamus voluptates temporibus ad consequatur"
 
 let jewelArray = myJewels.split("")
 let stoneArray = myStones.split("")
-let jewelCount = 0
+const initialValue = 0
 
-let result = jewelArray.map(function(jewel){
-    let ifJewel = stoneArray.filter(x=>x==jewel)
-    return ifJewel
-})
 
-console.log(result)
+let myJewelsCount = stoneArray.reduce(function(counter, currentStone) {
+    if (jewelArray.includes(currentStone)) {
+        return counter + 1
+    }
+    return counter
+}, initialValue)
+
+console.log('Número de joyas : ' + myJewelsCount)
