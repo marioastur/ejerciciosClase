@@ -2,14 +2,14 @@
 
 // Damos valores en tiempo de diseño
 let telefonos = new Map([
-    ['Juan','6363636363'],
-    ['Ana','777222999'],
-    ['Luis','888222918'],
-    ['Jose',{phone:88833333,city:'Oviedo'}]
+    ['Juan', '6363636363'],
+    ['Ana', '777222999'],
+    ['Luis', '888222918'],
+    ['Jose', { phone: 88833333, city: 'Oviedo' }]
 ])
 
 // Podemos añadir valores en tiempo de ejecución
-telefonos.set('Lucia',{phone:'182738495',city:'Gijón'})
+telefonos.set('Lucia', { phone: '182738495', city: 'Gijón' })
 
 //Leemos valores
 //console.log(telefonos.get('Jose').city)
@@ -19,28 +19,20 @@ telefonos.set('Lucia',{phone:'182738495',city:'Gijón'})
 
 
 
-
-
-
-
 var sortSentence = function(s) {
-    let text=s.split(' ')
-    console.log(text)
-
-    text = text.map(function(word){
-        console(length.text)
-    })
-    text = text.sort()
-        console.log(text)
-    
-
-
-
-  
-
-    let frase = text.map(x=>{return x.slice(0,-1)})
-    
+    /*
+    let text = s.split(' ')
+    text = text.sort(
+        (a, b) => a.slice(-1) - b.slice(-1)
+    )
+    let frase = text.map(x => { return x.slice(0, -1) })
     console.log(frase.join(' '))
+    */
+
+    // Menos lineas
+
+    return s.split(' ').sort((a, b) => a.slice(-1) - b.slice(-1)).map(x => { return x.slice(0, -1) }).join(' ')
+
 };
 s = "Myself2 Me1 I4 and3"
-sortSentence(s)
+console.log(sortSentence(s))
