@@ -20,19 +20,17 @@ telefonos.set('Lucia', { phone: '182738495', city: 'Gijón' })
 
 
 var sortSentence = function(s) {
-    /*
-    let text = s.split(' ')
-    text = text.sort(
-        (a, b) => a.slice(-1) - b.slice(-1)
-    )
-    let frase = text.map(x => { return x.slice(0, -1) })
-    console.log(frase.join(' '))
-    */
 
-    // Menos lineas
+    const textArray = s.split(' ')
+    const textSort = textArray.sort((a, b) => a.slice(-1) - b.slice(-1))
+        // const textSort = textArray.sort((a, b) => a.charAt(a.length - 1) - b.charAt(b.length - 1))
+    const finalWords = textSort.map(x => { return x.slice(0, -1) })
+    const finalString = finalWords.join(' ')
+    return finalString
 
-    return s.split(' ').sort((a, b) => a.slice(-1) - b.slice(-1)).map(x => { return x.slice(0, -1) }).join(' ')
+    // Una linea
 
+    //return s.split(' ').sort((a, b) => a.slice(-1) - b.slice(-1)).map(x => { return x.slice(0, -1) }).join(' ')
 };
 s = "Myself2 Me1 I4 and3"
 console.log(sortSentence(s))
