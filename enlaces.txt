@@ -1,3 +1,6 @@
+https://vuejs.org/guide/quick-start.html#with-build-tools 
+
+
 https://www.planview.com/resources/articles/lkdc-principles-lean-development/ 
 
 https://en.wikipedia.org/wiki/How_to_Solve_It
