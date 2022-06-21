@@ -22,8 +22,8 @@ const router = createRouter({
       path: '/class',
       name: 'class',
       component: MyView
-    }
-  ]
+    },
+  ],
 })
 
 export default router

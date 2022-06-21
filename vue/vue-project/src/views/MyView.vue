@@ -3,7 +3,7 @@ import TheWelcome from '@/components/TheWelcome.vue'
 </script>
 
 <template>
-<p></p>
+<p>Hola</p>
 </template>
 <style lang='css' scoped>
 h1{
