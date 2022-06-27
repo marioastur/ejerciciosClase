@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+		Escribir una pseudoclase telefono, con la siguiente descripción:
+		Propiedades:
+			nTfno de tipo String
+		Metodos:
+		*	Constructor: Permite asignar el nº de tlfno.
+		*   Validar : se encarga de comprobar si todos los caracteres de la cadena están entre 0 y 9
+		*	Iguales : comprueba si dos nTfno son iguales, entonces devuelve un mensaje por consola.
+		*	esMayor : comprueba el numero mayor de dos nTfno, devuelve un mensaje con el mayor.
+		*	esMenor : comprueba el numero menor de dos nTfno, devuelve un mensaje con el menor.
+		*	leerTelefono : retorna el nTfno. (get)
+		*	mostrarTelefono: Muestra por consola el nTfno.
+		*   cambiarTelefono: Permite sustituir el nTfno por otro nuevo.
+	    */
+
+        function telefono(tlf){
+            // Propiedades
+            this.nTfno = tlf;
+
+            // Metodos
+            this.validar = function(){
+                for (let index = 0; index < this.nTfno.length; index++) {
+                    if (isNaN(this.nTfno[index])) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            this.iguales = function(d){
+                var nuevo = d;
+                if(this.nTfno === nuevo){
+                    console.log('Los numero son iguales');
+                    return;
+                }
+                console.log('Los numero NO son iguales');
+                    return;
+            }
+
+            this.esMayor = function(d){
+                var nuevo = d;
+                if(nuevo>this.leerTelefono()){
+                    console.log('El telefono ' + nuevo + ' es MAYOR que ' + this.nTfno);
+                    return;
+                }
+                return false;
+            }
+
+            this.esMenor = function(d){
+                var nuevo = d;
+                if(nuevo<this.leerTelefono()){
+                    console.log('El telefono ' + nuevo + ' es MENOR que ' + this.nTfno);
+                    return;
+                }
+                return false;
+            }
+
+            this.leerTelefono = function(){
+                return this.nTfno;
+            }
+        
+            this.mostrarTelefono = function(){
+                console.log('Su telefono es: ' + this.nTfno);
+            }
+
+            this.cambiaTelefono = function(d){
+                this.nTfno = d;
+            }
+        } // Fin pseudoclase
+
+        // Creamos el objeto
+        var numero = '607160020';
+        var miTelefono = new telefono(numero);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

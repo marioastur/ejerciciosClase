@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="charset" content="UTF-8">
+  <meta name="Author" content="IFCD0210">
+  <meta name="Description" content="">
+  <title>Inicio</title>
+  <script type="text/javascript">
+  <!--
+	/*	Escribir una pseudoclase telefono, con la siguiente descripción:
+		Propiedades:
+			nTfno de tipo String
+		Metodos:
+			Constructor: Permite asignar el nº de tlfno.
+			Validar : se encarga de comprobar si todos los caracteres de la cadena están entre 0 y 9
+			leerTelefono : retorna el nTfno. (get)
+			mostrarTelefono: Muestra por consola el nTfno.
+			cambiarTelefono: Permite sustituir el nTfno por otro nuevo.
+			Iguales : comprueba si dos nTfno son iguales, entonces devuelve un mensaje por consola.
+			esMayor : comprueba el numero mayor de dos nTfno, devuelve un mensaje con el mayor.
+			esMenor : comprueba el numero menor de dos nTfno, devuelve un mensaje con el menor.
+	*/
+	function telefono(numtele) {
+		// Propiedades
+		this.nTfno = numtele;
+
+		// Metodos
+
+		this.Validar = function () {
+			// Mido el num tele
+			var lon = this.nTfno.length;
+			// Recorrer caracter a caracter
+			for (i=0;i<lon ;++i)
+			{
+				// if ( isNaN(this.nTfno[i]))
+				if ( isNaN(this.nTfno.charAt(i)))
+				{
+				console.log('ERROR: N. de Tlfno INCORRECTO. '+this.leerTelefono());
+				return false;
+				}
+			}
+			return true;
+		}
+
+		// this.getnTfno()
+		this.leerTelefono = function () {	return this.nTfno;		}
+
+		this.mostrarTelefono = function () { console.log(this.leerTelefono());  }
+
+		// this.setnTfno(nuevo_valor)
+		this.cambiarTelefono = function (nuevo) {	this.nTfno = nuevo;	}
+
+	//	Iguales : comprueba si dos nTfno son iguales, entonces devuelve un mensaje por consola.
+	    this.Iguales = function (otroTelefono) {
+		//	if (this.nTfno === otroTelefono.nTfno)
+			if (this.leerTelefono() === otroTelefono.leerTelefono())
+			{
+				console.log('Son dos telefonos iguales.');
+				this.mostrarTelefono();
+				otroTelefono.mostrarTelefono();
+				return true;
+			}
+		console.log('Son dos telefonos DISTINTOS.');
+		return false;
+		}
+		
+		this.esMayor = function (otroTelefono) {
+			if (this.leerTelefono() > otroTelefono.leerTelefono())
+			{
+				console.log('El tlfno. mayor es: ');
+				this.mostrarTelefono();
+				return true;
+			}
+			if (this.leerTelefono() < otroTelefono.leerTelefono())
+			{
+				console.log('El tlfno. mayor es: ');
+				otroTelefono.mostrarTelefono();
+				return true;
+			}
+		 return false;		
+		}
+
+		this.esMenor = function (otroTelefono) {
+			if (this.leerTelefono() > otroTelefono.leerTelefono())
+			{
+				console.log('El tlfno. menor es: ');
+				otroTelefono.mostrarTelefono();
+				return true;
+			}
+			if (this.leerTelefono() < otroTelefono.leerTelefono())
+			{
+				console.log('El tlfno. menor es: ');
+				this.mostrarTelefono();
+				return true;
+			}
+		 return false;		
+		}
+		
+	} // Fin de la pseudoclase
+
+	// Prueba de la pseudoclase
+	var hotel = new telefono('12345678');
+	// Construir un objeto
+	var micasa = new telefono('985223344');
+	// Vamos a probar si es valido
+	/* micasa.Iguales(otroTelefono);
+	micasa.Validar();
+	micasa.mostrarTelefono();
+	micasa.cambiarTelefono('659008765');
+	micasa.mostrarTelefono();
+	*/
+	micasa.esMayor(hotel);
+	micasa.esMenor(hotel);
+
+
+
+
+  //-->
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

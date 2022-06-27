@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="charset" content="UTF-8">
+  <meta name="Author" content="IFCD0210">
+  <meta name="Description" content="">
+  <title>Inicio</title>
+  <script>
+	// Vamos a crear un array de asistencia semanal
+	// var Benito = new Object(300,340,280,360,60);
+	var Benito = new Array(300,340,280,360,60);
+	// JSON
+	var Manolo = [330,340,320,,360];
+	Manolo[3]=300;
+	// Presentar 
+	for (i=0;i<5;++i)
+	{
+		console.log(Manolo[i]);
+	}
+	// var Tato = new Array();
+	var Tato = new Object();
+	Tato['lunes'] = 330;
+	Tato['martes'] = 360;
+	Tato.miercoles = 30;
+	Tato['jueves'] = 350;
+	Tato['viernes'] = 323;
+	// No usar espacios en blanco en la clave
+	var Tino = { 
+		'lunes 15': 3500, 
+		martes: 400, 
+		'miercoles': 400 
+				};
+    console.log(Tino['lunes 15']);
+
+	// Mostrar el contenido del array asociativo.
+	var c;
+	for (c in Tato)
+		console.log(c + ' con valor ' + Tato[c]);
+				
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
