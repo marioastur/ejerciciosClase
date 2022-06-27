@@ -5,3 +5,14 @@ https://en.wikipedia.org/wiki/How_to_Solve_It
 https://youtu.be/pifBpLAun6U 
 
 https://leetcode.com/problems/jewels-and-stones/ 
+
+
+
+Enlaces API
+
+https://github.com/public-apis/public-apis https://rapidapi.com/hub 
+https://github.com/public-apis/public-apis
+
+
+https://github.com/giacomoF5/CS-API-REST 
+
