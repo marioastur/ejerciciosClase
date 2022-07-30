@@ -31,8 +31,9 @@ const marvelApi = async() => {
 }
 
 marvelApi()
-console.log(myMarvel)
+
 console.log('FUERA de la funcion')
+console.log(myMarvel)
 console.log(myMarvel[0].name) 
 console.log(myMarvel[0].powerstats.intelligence) 
 
